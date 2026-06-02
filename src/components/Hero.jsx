@@ -26,7 +26,7 @@ export function HeroSection(){
                         <li><a href="https://drive.google.com/file/d/1qInXzMJND4GuBL2GJl3PrLPvLioyrecv/view?usp=sharing" id="resume">Resume</a></li>
                         <li><a href="https://www.linkedin.com/in/aisha-adamu-/" className="navIcons"><img src={linkedinRed} alt="linkedin link"/></a></li>
                         <li><a href="https://github.com/aisha2106" className="navIcons"><img src="assets/icons/githubBlack.png" alt="link to github"/></a></li>
-                        <li><a href="#" className="navIcons"><img src="assets/icons/mail (1).png" alt="link to mail"/></a></li>
+                        <li><a href="mailto:nanaaisha2106@gmail.com" className="navIcons"><img src="assets/icons/mail (1).png" alt="link to mail"/></a></li>
                     </ul>      
         </div>
         </div>

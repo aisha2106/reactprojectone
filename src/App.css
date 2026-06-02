@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -188,7 +188,8 @@ li{
 }
 
 .project div div{
-    width: 550px;
+    width: 550px; 
+    /* border: solid; */
     
 }
 .project div div a:first-child{
@@ -196,7 +197,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120px;
+    width: 140px;
     margin-right:5px ;
     margin-left:5px ;
     line-height: 22px;
@@ -217,7 +218,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100px;
+    width: 120px;
     margin-right:5px ;
     margin-left:5px ;
     line-height: 22px;
@@ -272,6 +273,7 @@ li{
     padding: 8px;
     border-radius: 12%;
     color: black;
+    margin: 3px;
 }
 #stack:hover{
     background-color: #CD0002;
@@ -341,8 +343,8 @@ footer .lineclass{
 .two{
     background-color: #e2ada6d9;
 }
-#two{
-    background-color: #e2ada6d9;
+.three{
+    background-color:  #6D9785;
 }
 .about{
     /* border: #131212 solid 1px; */
@@ -442,317 +444,148 @@ header nav img{
     width: 20px;
     margin-right: 20px;
 }
+/* Style the hamburger button and hide it on desktop */
+.hamburger {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
 
-/* ============================================
-   MEDIA QUERIES - RESPONSIVE DESIGN
-   ============================================ */
+/* Style the three lines */
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #131212; /* Matches your text color */
+    transition: all 0.3s ease-in-out; /* Smooth animation */
+}
 
-/* Tablet & Small Devices (768px and below) */
-@media (max-width: 768px) {
-    body {
-        margin: 10px;
-    }
+/* ==========================================================================
+   MATERIAL DESIGN 3 MEDIA QUERIES
+   ========================================================================== */
 
-    .navbar {
-        flex-direction: column;
-        font-size: 14px;
-    }
-
-    .navbar nav {
-        flex-direction: column;
-        min-width: auto;
-        width: 100%;
-        margin-top: 15px;
-        gap: 10px;
-    }
-
-    .navbar nav a {
-        display: block;
-        padding: 8px 0;
-    }
-
+/* --------------------------------------------------------------------------
+   TABLET (Medium Layouts) - Max Width: 840px
+   M3 Guidelines: Adaptive columns, scaled typography, flex-wrapping
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 840px) {
+    /* Hero Section */
     .hero-section {
         flex-direction: column;
-        padding: 20px 10px;
+        align-items: center;
+        padding-top: 24px;
     }
-
-    .hero-section h1 {
-        font-size: 48px;
-    }
-
-    .hero-section img {
-        width: 100%;
-        margin-top: 30px;
-    }
-
     .landingText {
         width: 100%;
         padding-right: 0;
+        margin-bottom: 32px;
+        text-align: center;
     }
-
-    .project {
-        flex-direction: column;
-        gap: 30px;
+    .hero-section h1 {
+        font-size: 56px; /* Scaled down M3 Display Large */
+        line-height: 1.2;
     }
-
-    .project div div {
+    .hero-section img {
+        width: 80%;
+    }
+    .contactMe ul {
         width: 100%;
-        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        padding-top: 16px;
     }
 
+    /* Projects Section */
+    .project {
+        flex-direction: column-reverse; /* Stack text below or above image */
+        gap: 24px;
+        margin-bottom: 48px;
+    }
     .projectImg {
         width: 100%;
         height: auto;
-        padding-top: 20px;
+        padding: 24px;
+        justify-content: center;
+    }
+    .project div div {
+        width: 100%; /* Overrides 550px fixed width */
     }
 
-    .projectImg img {
-        width: 100%;
-    }
-
+    /* About & Education Sections */
     .about {
         flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
-
     .about img {
-        width: 100%;
+        width: 80%;
         height: auto;
-        margin-bottom: 20px;
     }
-
     .about div {
         width: 100%;
     }
-
     .education {
-        height: auto;
-        flex-direction: row;
-    }
-
-    .education div {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .contactMe ul {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .contactMe ul li {
-        width: 100%;
-    }
-
-    .lineclass {
-        width: 100%;
-        padding-bottom: 60px;
-        padding-top: 60px;
-    }
-
-    .aboutMe .lineclass {
-        width: 100%;
-    }
-
-    footer .lineclass {
-        width: 100%;
-        padding-top: 80px;
-        padding-bottom: 30px;
-    }
-
-    footer nav ul {
-        width: 100%;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    footer section {
+        height: auto; /* Overrides fixed 400px height */
         flex-direction: column;
-        gap: 15px;
+        gap: 24px;
+    }
+    .education div {
+        width: 100%;
+        height: auto;
     }
 
-    #Projects {
-        padding-top: 60px;
-    }
-
-    #Projects h1 {
-        font-size: 28px;
-    }
-
-    .line {
-        width: 60px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    #resume {
-        padding: 12px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    #resume:hover {
-        padding: 12px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-}
-
-/* Mobile Devices (480px and below) */
-@media (max-width: 480px) {
-    body {
-        margin: 8px;
-    }
-
-    header {
-        padding-bottom: 5px;
-        padding-top: 5px;
-        margin-bottom: 5px;
-    }
-
-    .navbar {
-        font-size: 12px;
-    }
-
-    .navbar h2 {
-        font-size: 18px;
-    }
-
-    .navbar nav {
-        margin-top: 10px;
-    }
-
-    .hero-section {
-        padding: 15px 5px;
-    }
-
-    .hero-section h1 {
-        font-size: 36px;
-        line-height: 1.2;
-    }
-
-    .hero-section img {
-        margin-top: 20px;
-    }
-
-    .landingText p {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    .project div div a {
-        width: auto;
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    #Projects h1 {
-        font-size: 24px;
-    }
-
-    #Projects h1 span {
-        font-size: 12px;
-    }
-
-    .line {
-        width: 40px;
-        height: 1px;
-    }
-
-    h3 {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
+    /* Global Utilities */
     .lineclass {
-        padding-bottom: 40px;
-        padding-top: 40px;
-    }
-
-    .skills ul li {
-        display: inline-block;
-        padding: 5px;
-        font-size: 12px;
-        margin: 3px;
-    }
-
-    .education div {
         width: 100%;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
-
-    #resume {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
-        line-height: 18px;
-    }
-
-    footer section {
-        font-size: 12px;
-        line-height: 18px;
-    }
-
-    p {
-        line-height: 24px;
-    }
-
-    .navIcons {
-        height: 25px;
-        width: 25px;
-    }
-
-    .navIcons img {
-        height: 25px;
-        width: 25px;
-    }
-}
-
-/* Large Tablets (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .hero-section img {
-        width: 45%;
-    }
-
-    .project div div {
-        width: 500px;
-    }
-
-    .education {
-        height: 350px;
-    }
-
-    .education div {
-        width: 400px;
-    }
-
     footer nav ul {
-        width: 40%;
+        width: 60%;
     }
 }
 
-/* Extra Large Screens (1441px and above) */
-@media (min-width: 1441px) {
-    body {
-        max-width: 1600px;
-        margin: 20px auto;
+
+/* --------------------------------------------------------------------------
+   MOBILE (Compact Layouts) - Max Width: 600px
+   M3 Guidelines: 16px margins, single column, 48px touch targets
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 600px) {
+    /* 1. Show the hamburger and keep it next to the logo */
+    .navbar {
+        flex-direction: row; 
+        justify-content: space-between;
+        flex-wrap: wrap; /* Pushes the nav below the logo/hamburger */
     }
 
-    .hero-section {
-        padding: 60px 40px;
+    .hamburger {
+        display: block; /* Show on mobile */
     }
 
-    .hero-section h1 {
-        font-size: 80px;
+    /* 2. Hide the main menu by default */
+    .navbar nav {
+        display: none; 
+        width: 100%;
+        flex-direction: column;
+        padding-top: 16px;
     }
 
-    .project div div {
-        width: 600px;
+    /* 3. The class JavaScript will add when clicked */
+    .navbar nav.active {
+        display: flex;
     }
 
-    .education div {
-        width: 500px;
+    /* Optional: Animate the hamburger into an 'X' when active */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }

@@ -1,11 +1,9 @@
 import link from "../assets/icons/link.png"
 import github from "../assets/icons/githubBlack.png"
-export function Project({Name, Date, About, Stacks, url1 , url2, image}){
+export function Project({Name, Date, About, Stacks, url1 , url2, image, classname}){
     return(
         <>
          <section id="Projects">
-            <br />
-
 
         <section className="project">
             <div>
@@ -23,7 +21,7 @@ export function Project({Name, Date, About, Stacks, url1 , url2, image}){
                         </div>
                     </div>
                     
-                    <div className="one projectImg">
+                    <div className={classname}>
                         <img src={image} />
                     </div>
         </section>

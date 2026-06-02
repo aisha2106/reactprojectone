@@ -3,13 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import {Header} from "./components/Header"
+import Navbar from "./components/Navbar"
 import { HeroSection} from './components/Hero'
 import { Project } from './components/Projects'
 import { AboutMe } from './components/Aboutme'
 import { Footer } from './components/Footer'
 import favmovimg from "./assets/images/project1.png"
 import landingimg from "./assets/images/project2.png"
+import votenaijaimg from "./assets/images/votenaija.png"
 import { Linethingy } from './components/Linethingy'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-    <Header/>
+    <Navbar/>
     <HeroSection/>
     <Linethingy text={"FEATURED PROJECTS"}/>
     <Project 
@@ -26,8 +27,9 @@ function App() {
       About={"A simple website containing information about my favorite movie -Code Geass"}
       Stacks={["HTML", "CSS"]}
       url1={"https://aisha2106.github.io/favmovie/"}
-      url2={"https://aisha2106.github.io/favmovie/"}
+      url2={"https://github.com/aisha2106/favmovie"}
       image={favmovimg}
+      classname={"one projectImg"}
       
 
     />
@@ -37,8 +39,19 @@ function App() {
       About={"A simple Landing Page interface design with navigation links to Sign Up/In"}
       Stacks={["HTML", "CSS"]}
       url1={"https://aisha2106.github.io/Assignment-2/"}
-      url2={"https://aisha2106.github.io/https://github.com/aisha2106/Assignment-2"}
+      url2={"https://github.com/aisha2106/Assignment-2"}
       image={landingimg}
+      classname={"two projectImg"}
+    />
+    <Project 
+      Name={"Election Voting Simulator"}
+      Date={"May 2026"}
+      About={"A simple Election system simulator using Javascipt"}
+      Stacks={["HTML", "CSS" , "javascript"]}
+      url1={"https://aisha2106.github.io/javascript-project-votenaija/"}
+      url2={"https://github.com/aisha2106/javascript-project-votenaija"}
+      image={votenaijaimg}
+      classname={"three projectImg"}
     />
 
     <AboutMe/>
