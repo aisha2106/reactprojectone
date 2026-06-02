@@ -10,7 +10,7 @@ import { AboutMe } from './components/Aboutme'
 import { Footer } from './components/Footer'
 import favmovimg from "./assets/images/project1.png"
 import landingimg from "./assets/images/project2.png"
-import votenaijaimg from "./assets/images/votenaija.png"
+import votenaijaimg from "./assets/images/Votenaija.png"
 import { Linethingy } from './components/Linethingy'
 
 function App() {
